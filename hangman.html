@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" oncontextmenu="return false">
+<meta name="robots" content="NOINDEX, NOFOLLOW">
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="fontawesome.css">
+<link rel="stylesheet" href="game.css">
+<body onload="setup();w=document.querySelector('table')" onkeydown="kc=event.keyCode;kd=1;ctrl=event.ctrlKey;shft=event.shiftKey;" onkeyup="kc=0;ctrl=0;shft=0;">
+
+<div class="game">
+<div class="screen screen1">
+<div class="p" style="left:43%;font-family:'Comic Sans MS',gamefont,cursive,arial;font-size:20px;top:50px;">Hangman</div>
+<button class="p" style="left:15%;font-size:16px;top:110px;width:100px;" onclick="hmstart()">Start</button>
+<button class="p" style="left:15%;top:150px;width:100px;" onclick="$('.setup').hide();$('.help').slideToggle()">Help</button>
+<button class="p" style="left:15%;top:190px;width:100px;" onclick="$('.help').hide();$('.setup').slideToggle()">Settings</button>
+
+<div class="p ledaerbrd" style="right:15%;top:110px;width:150px;">
+<center style="background:#333;padding:5px;color:white;font-size:15px;border-top-left-radius:5px;border-top-right-radius:5px;">Leaderboard</center>
+<div style="max-height:200px;overflow-x:hidden;overflow-y:auto;border-left:1px solid #333;border-right:1px solid #333;border-bottom:1px solid #333;border-right:1px solid #333;" class="lbthels">
+
+</div>
+</div>
+
+<div class="help p">
+<center style="font-size:16px;margin-bottom:3px;">Help</center>
+<div style="font-size:12px;">In this game, you must guess the word to win. Get an incorrect letter and you lose a life.<br>
+Can you rank higher than your friends? Challenge them and see how lucky you are. Good luck!
+<br><br>
+Note: Cheating is not fair. Don't worry if you lose, just keep guessing and you'll get better.
+</div>
+</div>
+
+
+<div class="setup p">
+<center style="font-size:16px;margin-bottom:3px;">Settings</center>
+<div style="font-size:15px;">Theme: 
+<select id="themecbo">
+</select>
+</div>
+</div>
+
+<center class="p" style="left:0;right:0;font-size:14px;bottom:20px;color:#555;">www.restorecreate.com</center>
+
+
+</div>
+<div class="screen screen2">
+<canvas width="300" height="250" class="p" style="left:10%;top:30px;" id="c"></canvas>
+<div class="clock p"><i class="fa fa-stopwatch"></i> <span id="mytime">00:00</span></div>
+<div class="skor p">Score: <span id="myskor">0</span></div>
+<button class="p menubtn" style="right:30%;top:250px;width:100px;font-size:15px;" onclick="hmreturn()">Main Menu</button>
+<center class="p wordisplay" style="left:20px;bottom:80px;right:20px;">word</center>
+<center class="p catdisp" style="left:20px;bottom:60px;right:20px;">cat</center>
+<div class="p leterdiv" style="left:0px;bottom:20px;right:0px;"></div>
+</div>
+
+</div>
+<span style="font-family:gamefont,tahoma,verdana,arial,sans-serif;width:0;height:0;overflow:hidden;color:white;display:inline-block;font-size:0">cursormaze</span>
+<noscript>JavaScript is required to play Hangman.</noscript>
+<script SRC="ggame.js">
+
+</script>
+<script SRC="gwords.js">
+
+</script>

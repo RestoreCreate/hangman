@@ -1,0 +1,128 @@
+.game{
+	cursor:default;
+    position:relative;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    overflow:hidden;
+}
+@font-face{
+	font-family:gamefont;
+	src:url(vag-01.woff);
+	font-weight:normal;
+}
+.p{position:absolute;font:16px gamefont;}
+
+table{
+	border-collapse:collapse;
+}
+.game{
+    max-width:500px;
+    height:400px;
+}
+.screen{
+    display:none;
+}
+.llbitem{
+    padding:5px;
+    font-size:14px;
+    border-bottom:1px dashed #CCC;
+}
+.llbitem:last-child{
+    border-bottom:none;
+}
+.llbitem .sn{
+width:65%;
+width:calc(100% - 40px);
+overflow:hidden;
+text-overflow:ellipsis;
+display:inline-block;
+vertical-align:top;
+}
+.llbitem .sp{
+float:right;
+display:inline-block;
+}
+.setup, .help{
+background:#DDD;
+bottom:50px;
+left:15%;
+right:15%;
+height:100px;
+border-radius:5px;
+padding:5px;
+display:none;
+overflow-y:auto;
+overflow-x:hidden;
+}
+body{
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    font-family:arial;
+}
+button{
+background:#369;
+color:white;
+cursor:pointer;
+padding:7px;
+border-radius:7px;
+border:1px solid #257;
+font-size:14px;
+outline:none;
+}
+ button:hover{
+background:#258;
+}
+.wordisplay{
+    font-size:20px;
+    letter-spacing:5px;
+    color:#369;
+}
+.catdisp{
+    font-size:12px;
+    color:#444;
+}
+.leterdiv button{
+    background:transparent;
+    font-size:16px;
+    border:none;
+    padding:5px 0;
+    border-radius:0;
+    color:black;
+    font-family:gamefont;
+}
+.leterdiv button:not(:disabled):hover{
+    color:#369;
+    text-shadow:0 0 2px rgba(0,0,0,0.4);
+    }
+.leterdiv button:disabled{
+    color:#888;
+    text-decoration:line-through;
+}
+.clock{
+    top:20px;
+    right:5%;
+    font-size:16px;
+}
+.clock i{
+    margin-right:5px;
+}
+.skor{
+    top:50px;
+    right:5%;
+    font-size:16px;
+}
+select{
+    border:1px inset #888;
+    background:white;
+    color:black;
+    outline:none;
+    min-width:100px;
+    font:12px gamefont;
+    padding:1px;
+}
+.llbitem.highl{
+color:#369;
+}
