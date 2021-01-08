@@ -126,3 +126,32 @@ select{
 .llbitem.highl{
 color:#369;
 }
+.leterdiv.mobi{
+overflow-x:scroll;
+white-space:nowrap;
+bottom:10px;
+}
+.leterdiv.mobi button{
+height:40px;
+width:40px;
+font-size:20px;
+}
+.shdw{
+position:absolute;
+pointer-events:none;
+z-index:4;
+}
+.shdw.r{
+right:0;
+top:0;
+bottom:0;
+width:15px;
+background-image: linear-gradient(to right, transparent ,rgba(0,0,0,0.2));
+}
+.shdw.l{
+left:0;
+top:0;
+bottom:0;
+width:15px;
+background-image: linear-gradient(to right, rgba(0,0,0,0.2) ,transparent);
+}
